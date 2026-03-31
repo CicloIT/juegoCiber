@@ -439,20 +439,21 @@
                     question: 'Al definir una contraseña para una plataforma crítica de trabajo, ¿cuál de estas opciones ofrece mayor seguridad real en el tiempo?',
                     options: [
                         'Una palabra conocida con reemplazos (ej: P@ssw0rd!)',
-                        'Una combinación corta de caracteres aleatorios',
-                        'Una frase extensa, poco predecible y única para ese uso'
+                        'Una frase extensa, poco predecible y única para ese uso',
+                        'Una combinación corta de caracteres aleatorios',                        
                     ],
-                    correct: 2,
+                    correct: 1,
                     explanation: ''
                 },
                 {
                     question: 'En un entorno laboral con múltiples accesos, ¿cuál es la práctica más segura respecto al uso de contraseñas?',
                     options: [
-                        'Reutilizar una contraseña compleja en todos los sistemas',
+                    'Utilizar contraseñas únicas gestionadas mediante un administrador seguro',    
+                    'Reutilizar una contraseña compleja en todos los sistemas',
                         'Usar variaciones mínimas de una misma contraseña',
-                        'Utilizar contraseñas únicas gestionadas mediante un administrador seguro'
+                        
                     ],
-                    correct: 2,
+                    correct: 0,
                     explanation: ''
                 },
                 {
@@ -481,31 +482,32 @@
                 {
                     question: 'Recibís un correo indicando que tu cuenta será suspendida si no realizás una acción inmediata mediante un enlace. ¿Cuál es el enfoque más seguro?',
                     options: [
+                        'Verificar remitente, dominio y enlace antes de cualquier acción',
                         'Acceder rápidamente para evitar bloqueos',
-                        'Ignorar el mensaje momentáneamente',
-                        'Verificar remitente, dominio y enlace antes de cualquier acción'
+                        'Ignorar el mensaje momentáneamente',                        
                     ],
-                    correct: 2,
+                    correct: 0,
                     explanation: ''
                 },
                 {
                     question: 'Un correo aparenta provenir de una entidad legítima, pero el dominio presenta una leve alteración. ¿Qué indica esto?',
                     options: [
+                        'Un intento de suplantación (phishing)',
                         'Una variación válida del dominio',
-                        'Un posible error técnico',
-                        'Un intento de suplantación (phishing)'
+                        'Un posible error técnico',                        
                     ],
-                    correct: 2,
+                    correct: 0,
                     explanation: ''
                 },
                 {
                     question: 'Un correo bien redactado, con datos personales correctos, solicita actualizar credenciales. ¿Cuál es el riesgo principal?',
                     options: [
                         'Ninguno si la información es correcta',
+                        'Puede tratarse de phishing dirigido (spear phishing)',
                         'Bajo riesgo por tratarse de un mensaje personalizado',
-                        'Puede tratarse de phishing dirigido (spear phishing)'
+                        
                     ],
-                    correct: 2,
+                    correct: 1,
                     explanation: ''
                 },
                 {
@@ -521,11 +523,12 @@
                 {
                     question: 'Se solicita validar una cuenta mediante el escaneo de un código QR recibido por correo. ¿Cuál es el principal riesgo?',
                     options: [
-                        'Ninguno, es un método seguro',
+                    'Posible phishing mediante QR (quishing) para redirigir a sitios fraudulentos',    
+                    'Ninguno, es un método seguro',
                         'Puede tratarse de un error de comunicación',
-                        'Posible phishing mediante QR (quishing) para redirigir a sitios fraudulentos'
+                        
                     ],
-                    correct: 2,
+                    correct: 0,
                     explanation: ''
                 }
             ],
@@ -535,20 +538,21 @@
                     question: 'Al conectarte a una red WiFi pública, ¿cuál es el principal riesgo al acceder a servicios sensibles?',
                     options: [
                         'Baja velocidad de conexión',
+                        'Intercepción de datos por terceros en la red',
                         'Interrupciones en el servicio',
-                        'Intercepción de datos por terceros en la red'
+                        
                     ],
-                    correct: 2,
+                    correct: 1,
                     explanation: ''
                 },
                 {
                     question: 'Una red abierta con nombre similar al de un comercio conocido está disponible sin contraseña. ¿Qué escenario es posible?',
                     options: [
                         'Red oficial del establecimiento',
-                        'Red compartida por usuarios',
-                        'Red falsa creada para capturar información (ataque "evil twin")'
+                        'Red falsa creada para capturar información (ataque "evil twin")',
+                        'Red compartida por usuarios',                        
                     ],
-                    correct: 2,
+                    correct: 1,
                     explanation: ''
                 },
                 {
@@ -577,11 +581,11 @@
                 {
                     question: 'El uso de dispositivos externos (ej: USB) de origen desconocido implica principalmente:',
                     options: [
+                        'Posible ejecución de software malicioso sin intervención del usuario',
                         'Riesgo bajo si el dispositivo es nuevo',
-                        'Riesgo limitado al contenido visible',
-                        'Posible ejecución de software malicioso sin intervención del usuario'
+                        'Riesgo limitado al contenido visible',                        
                     ],
-                    correct: 2,
+                    correct: 0,
                     explanation: ''
                 },
                 {
@@ -611,10 +615,10 @@
                     question: 'Compartir credenciales entre usuarios dentro de una organización afecta principalmente:',
                     options: [
                         'La velocidad de trabajo',
-                        'La comodidad operativa',
-                        'La trazabilidad y el control de accesos'
+                        'La trazabilidad y el control de accesos',
+                        'La comodidad operativa',                        
                     ],
-                    correct: 2,
+                    correct: 1,
                     explanation: ''
                 }
             ],
@@ -623,11 +627,11 @@
                 {
                     question: 'Una persona se comunica afirmando pertenecer al soporte técnico y solicita acceso remoto. ¿Cuál es el riesgo principal?',
                     options: [
+                        'Posible ataque de ingeniería social para obtener control del equipo',
                         'Demora en la resolución del problema',
-                        'Acceso limitado al sistema',
-                        'Posible ataque de ingeniería social para obtener control del equipo'
+                        'Acceso limitado al sistema',                        
                     ],
-                    correct: 2,
+                    correct: 0,
                     explanation: ''
                 },
                 {
@@ -667,10 +671,11 @@
                     question: 'Detectar actividad inusual en una cuenta (accesos, movimientos) requiere:',
                     options: [
                         'Monitoreo pasivo',
+                        'Acción inmediata para mitigar el posible compromiso',
                         'Evaluación posterior',
-                        'Acción inmediata para mitigar el posible compromiso'
+                        
                     ],
-                    correct: 2,
+                    correct: 1,
                     explanation: ''
                 }
             ],
