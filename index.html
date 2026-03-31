@@ -1148,7 +1148,7 @@
             } else if (correctAnswers >= 2) {
                 emoji = '📈';
                 headline = 'Podrías mejorar algunas prácticas';
-                subtext = 'Respondiste 2 de 4 correctamente. Hay margen para reforzar tu seguridad.';
+                subtext = `Solo respondiste ${correctAnswers} de 4 correctamente. Hay margen para reforzar tu seguridad.`;
                 bgColor = '#fff8e1';
             } else {
                 emoji = '⚠️';
@@ -1208,7 +1208,7 @@
                 <div class="waiting-message">
                     <span class="icon">🎡</span>
                     <p><strong>¡Nueva ronda! Presioná GIRAR para comenzar</strong></p>
-                    <p>Respondé 3 preguntas y descubrí tu nivel de seguridad</p>
+                    <p>Respondé 4 preguntas y descubrí tu nivel de seguridad</p>
                 </div>
             `;
         }
