@@ -836,7 +836,6 @@
         const POINTS_PER_QUESTION = 25;
         let roundQuestions = 0;   // preguntas respondidas en la ronda
         let correctAnswers = 0;   // respuestas correctas en la ronda
-        let usedCategories = new Set(); // categorías ya usadas en la ronda
 
         // ── DRAW RIVETS ───────────────────────────────────────────────────
         function drawRivets() {
@@ -1009,18 +1008,20 @@
             setTimeout(() => {
                 isSpinning = false;
 
-                // Si la categoría ya fue usada en esta ronda, volver a girar
-                if (usedCategories.has(currentCategory.name)) {
+                const available = questionsDB[currentCategory.name].filter((_, idx) =>
+                    !questionsAnswered.has(`${currentCategory.name}-${idx}`)
+                );
+
+                if (available.length === 0) {
                     document.getElementById('questionPanel').innerHTML = `
                         <div class="waiting-message">
                             <span class="icon">🔄</span>
-                            <p><strong>${currentCategory.icon} ${currentCategory.name}</strong> ya fue jugada.</p>
-                            <p style="color:#20b2aa;">Girando de nuevo automáticamente...</p>
+                            <p>No hay preguntas disponibles en <strong>${currentCategory.icon} ${currentCategory.name}</strong>.</p>
+                            <p style="color:#20b2aa;">Haz clic en GIRAR para intentarlo de nuevo.</p>
                         </div>
                     `;
-                    setTimeout(spinWheel, 1500);
+                    document.getElementById('spinBtn').disabled = false;
                 } else {
-                    usedCategories.add(currentCategory.name);
                     document.getElementById('spinBtn').disabled = false;
                     showQuestion(currentCategory);
                 }
@@ -1034,14 +1035,11 @@
                 !questionsAnswered.has(`${category.name}-${idx}`)
             );
 
-            if (available.length === 0) {
-                questions.forEach((_, idx) => questionsAnswered.delete(`${category.name}-${idx}`));
-            }
-
-            const qIdx = Math.floor(Math.random() * questions.length);
-            const qData = questions[qIdx];
+            const qIdx = Math.floor(Math.random() * available.length);
+            const qData = available[qIdx];
+            const originalIdx = questions.indexOf(qData);
             currentExplanation = qData.explanation || '';
-            questionsAnswered.add(`${category.name}-${qIdx}`);
+            questionsAnswered.add(`${category.name}-${originalIdx}`);
 
             // Keep the button locked until the user answers
             document.getElementById('spinBtn').disabled = true;
@@ -1185,7 +1183,6 @@
             correctAnswers = 0;
             score = 0;
             questionsAnswered.clear();
-            usedCategories.clear();
             currentCategory = null;
             currentExplanation = '';
 
