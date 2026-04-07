@@ -432,396 +432,355 @@
             { name: 'Internet', color: '#20b2aa', textColor: '#ffffff', icon: '📶' },
         ];
 
-        const questionsDB = {
-            'Contraseña': [
-                {
-                    question: 'Al definir una contraseña para una plataforma crítica de trabajo, ¿cuál de estas opciones ofrece mayor seguridad real en el tiempo?',
-                    options: [
-                        'Una palabra conocida con reemplazos (ej: P@ssw0rd!)',
-                        'Una frase extensa, poco predecible y única para ese uso',
-                        'Una combinación corta de caracteres aleatorios',
-                    ],
-                    correct: 1,
-                    explanation: ''
-                },
-                {
-                    question: 'En un entorno laboral con múltiples accesos, ¿cuál es la práctica más segura respecto al uso de contraseñas?',
-                    options: [
-                        'Utilizar contraseñas únicas gestionadas mediante un administrador seguro',
-                        'Reutilizar una contraseña compleja en todos los sistemas',
-                        'Usar variaciones mínimas de una misma contraseña',
-
-                    ],
-                    correct: 0,
-                    explanation: ''
-                },
-                {
-                    question: 'Un colega solicita acceso urgente a un sistema y te pide tu contraseña de forma temporal. ¿Cuál es la respuesta más adecuada?',
-                    options: [
-                        'Compartirla y modificarla luego',
-                        'Compartirla si es alguien de confianza',
-                        'No compartirla y gestionar un acceso individual alternativo'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: 'Recibís un código de verificación (2FA) sin haber iniciado ningún intento de acceso. ¿Cuál es la interpretación más correcta?',
-                    options: [
-                        'Un error del sistema',
-                        'Un envío automático sin relevancia',
-                        'Un posible intento de acceso no autorizado a tu cuenta'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: '¿Cuál es el riesgo de guardar contraseñas en el navegador sin protección adicional?',
-                    options: [
-                        'Ninguno si el equipo es personal',
-                        'Solo riesgo si se comparte el equipo',
-                        'Pueden ser extraídas por malware o accesos no autorizados'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: '¿Qué práctica mejora la seguridad de las contraseñas además de su complejidad?',
-                    options: [
-                        'Cambiar solo cuando se olvidan',
-                        'Anotarlas en lugares visibles',
-                        'Activar autenticación multifactor (MFA)'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                }
+       const questionsDB = {
+    'Contraseña': [
+        {
+            question: 'Al definir una contraseña para una plataforma crítica de trabajo, ¿cuál de estas opciones ofrece mayor seguridad real en el tiempo?',
+            options: [
+                'Una palabra conocida con reemplazos (ej: P@ssw0rd!)',
+                'Una frase extensa, poco predecible y única para ese uso',
+                'Una combinación corta de caracteres aleatorios',
             ],
-
-            'Mail': [
-                {
-                    question: 'Recibís un correo indicando que tu cuenta será suspendida si no realizás una acción inmediata mediante un enlace. ¿Cuál es el enfoque más seguro?',
-                    options: [
-                        'Verificar remitente, dominio y enlace antes de cualquier acción',
-                        'Acceder rápidamente para evitar bloqueos',
-                        'Ignorar el mensaje momentáneamente',
-                    ],
-                    correct: 0,
-                    explanation: ''
-                },
-                {
-                    question: 'Un correo aparenta provenir de una entidad legítima, pero el dominio presenta una leve alteración. ¿Qué indica esto?',
-                    options: [
-                        'Un intento de suplantación (phishing)',
-                        'Una variación válida del dominio',
-                        'Un posible error técnico',
-                    ],
-                    correct: 0,
-                    explanation: ''
-                },
-                {
-                    question: 'Un correo bien redactado, con datos personales correctos, solicita actualizar credenciales. ¿Cuál es el riesgo principal?',
-                    options: [
-                        'Ninguno si la información es correcta',
-                        'Puede tratarse de phishing dirigido (spear phishing)',
-                        'Bajo riesgo por tratarse de un mensaje personalizado',
-
-                    ],
-                    correct: 1,
-                    explanation: ''
-                },
-                {
-                    question: 'Recibís un enlace de un contacto conocido sin contexto adicional. ¿Cuál es la mejor práctica?',
-                    options: [
-                        'Acceder al enlace con normalidad',
-                        'Evaluar el contenido luego de abrirlo',
-                        'Confirmar previamente con el remitente la legitimidad del envío'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: 'Se solicita validar una cuenta mediante el escaneo de un código QR recibido por correo. ¿Cuál es el principal riesgo?',
-                    options: [
-                        'Posible phishing mediante QR (quishing) para redirigir a sitios fraudulentos',
-                        'Ninguno, es un método seguro',
-                        'Puede tratarse de un error de comunicación',
-
-                    ],
-                    correct: 0,
-                    explanation: ''
-                },
-                {
-                    question: 'Un correo incluye un archivo adjunto inesperado. ¿Qué se debe hacer?',
-                    options: [
-                        'Abrirlo para verificar',
-                        'Descargarlo y revisarlo luego',
-                        'No abrirlo y validar con el remitente'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: '¿Qué característica es común en correos de phishing?',
-                    options: [
-                        'Diseño profesional',
-                        'Solicitudes urgentes de información sensible',
-                        'Remitente conocido',
-                    ],
-                    correct: 1,
-                    explanation: ''
-                }
+            correct: 1
+        },
+        {
+            question: 'En un entorno laboral con múltiples accesos, ¿cuál es la práctica más segura respecto al uso de contraseñas?',
+            options: [
+                'Usar variaciones mínimas de una misma contraseña',
+                'Utilizar contraseñas únicas gestionadas mediante un administrador seguro',
+                'Reutilizar una contraseña compleja en todos los sistemas',
             ],
-
-            'Internet': [
-                {
-                    question: 'Al conectarte a una red WiFi pública, ¿cuál es el principal riesgo al acceder a servicios sensibles?',
-                    options: [
-                        'Baja velocidad de conexión',
-                        'Intercepción de datos por terceros en la red',
-                        'Interrupciones en el servicio',
-
-                    ],
-                    correct: 1,
-                    explanation: ''
-                },
-                {
-                    question: 'Una red abierta con nombre similar al de un comercio conocido está disponible sin contraseña. ¿Qué escenario es posible?',
-                    options: [
-                        'Red oficial del establecimiento',
-                        'Red falsa creada para capturar información (ataque "evil twin")',
-                        'Red compartida por usuarios',
-                    ],
-                    correct: 1,
-                    explanation: ''
-                },
-                {
-                    question: 'Un sitio web presenta HTTPS y certificado válido. ¿Qué garantiza esto?',
-                    options: [
-                        'Que el sitio es legítimo',
-                        'Que pertenece a una entidad confiable',
-                        'Que la comunicación está cifrada, no necesariamente que el sitio sea auténtico'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: '¿Qué es una VPN en términos de seguridad?',
-                    options: [
-                        'Un sistema que cifra la conexión y protege la información',
-                        'Un antivirus avanzado',
-                        'Una red social privada',
-                    ],
-                    correct: 0,
-                    explanation: ''
-                },
-                {
-                    question: 'Ingresar credenciales en sitios no verificados puede provocar:',
-                    options: [
-                        'Robo de credenciales',
-                        'Errores de carga',
-                        'Bloqueo temporal',
-                    ],
-                    correct: 0,
-                    explanation: ''
-                }
+            correct: 1
+        },
+        {
+            question: 'Un colega solicita acceso urgente a un sistema y te pide tu contraseña de forma temporal. ¿Cuál es la respuesta más adecuada?',
+            options: [
+                'Compartirla si es alguien de confianza',
+                'No compartirla y gestionar un acceso individual alternativo',
+                'Compartirla y modificarla luego'
             ],
-
-            'Dispositivos': [
-                {
-                    question: 'Al retirarte momentáneamente de tu puesto de trabajo, ¿cuál es la medida más adecuada respecto a tu equipo?',
-                    options: [
-                        'Dejarlo activo si es por poco tiempo',
-                        'Minimizar aplicaciones abiertas',
-                        'Bloquear el acceso al sistema inmediatamente'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: 'El uso de dispositivos externos (ej: USB) de origen desconocido implica principalmente:',
-                    options: [
-                        'Posible ejecución de software malicioso sin intervención del usuario',
-                        'Riesgo bajo si el dispositivo es nuevo',
-                        'Riesgo limitado al contenido visible',
-                    ],
-                    correct: 0,
-                    explanation: ''
-                },
-                {
-                    question: 'Posponer actualizaciones del sistema operativo de forma recurrente puede generar:',
-                    options: [
-                        'Solo pérdida de nuevas funciones',
-                        'Impacto en el rendimiento',
-                        'Exposición a vulnerabilidades conocidas no corregidas'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: '¿Qué implica no utilizar bloqueo automático de pantalla?',
-                    options: [
-                        'Mayor comodidad',
-                        'Mejor rendimiento',
-                        'Riesgo de acceso no autorizado'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: 'Instalar software fuera de fuentes oficiales puede generar:',
-                    options: [
-                        'Mejor rendimiento',
-                        'Instalación de malware',
-                        'Más funciones',
-                    ],
-                    correct: 1,
-                    explanation: ''
-                }
+            correct: 1
+        },
+        {
+            question: 'Recibís un código de verificación (2FA) sin haber iniciado ningún intento de acceso. ¿Cuál es la interpretación más correcta?',
+            options: [
+                'Un error del sistema',
+                'Un posible intento de acceso no autorizado a tu cuenta',
+                'Un envío automático sin relevancia'
             ],
-
-            'Errores': [
-                {
-                    question: 'Mantener sesiones abiertas en sistemas corporativos sin supervisión implica:',
-                    options: [
-                        'Riesgo mínimo en entornos controlados',
-                        'Solo problemas operativos',
-                        'Acceso directo de terceros sin necesidad de autenticación'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: 'Compartir credenciales entre usuarios dentro de una organización afecta principalmente:',
-                    options: [
-                        'La velocidad de trabajo',
-                        'La trazabilidad y el control de accesos',
-                        'La comodidad operativa',
-                    ],
-                    correct: 1,
-                    explanation: ''
-                },
-                {
-                    question: 'Enviar información sensible por canales no seguros puede provocar:',
-                    options: [
-                        'Demoras',
-                        'Errores administrativos',
-                        'Filtración de información'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                }
+            correct: 1
+        },
+        {
+            question: '¿Cuál es el riesgo de guardar contraseñas en el navegador sin protección adicional?',
+            options: [
+                'Pueden ser extraídas por malware o accesos no autorizados',
+                'Ninguno si el equipo es personal',
+                'Solo riesgo si se comparte el equipo'
             ],
-
-            'Engaños Digitales': [
-                {
-                    question: 'Una persona se comunica afirmando pertenecer al soporte técnico y solicita acceso remoto. ¿Cuál es el riesgo principal?',
-                    options: [
-                        'Posible ataque de ingeniería social para obtener control del equipo',
-                        'Demora en la resolución del problema',
-                        'Acceso limitado al sistema',
-                    ],
-                    correct: 0,
-                    explanation: ''
-                },
-                {
-                    question: 'El uso de información real (nombre, empresa, cargo) en un contacto inesperado suele indicar:',
-                    options: [
-                        'Comunicación legítima',
-                        'Base de datos interna',
-                        'Uso de datos filtrados para generar confianza (ingeniería social)'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: 'Los mensajes que generan urgencia o presión buscan principalmente:',
-                    options: [
-                        'Acelerar procesos',
-                        'Mejorar la comunicación',
-                        'Reducir el análisis crítico del usuario'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: 'Un mensaje inesperado solicitando acciones urgentes suele ser:',
-                    options: [
-                        'Un error del sistema',
-                        'Una actualización importante',
-                        'Un intento de manipulación (ingeniería social)'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: '¿Qué busca principalmente un atacante en un engaño digital?',
-                    options: [
-                        'Obtener acceso o información confidencial',
-                        'Mejorar procesos',
-                        'Ayudar al usuario',
-                    ],
-                    correct: 0,
-                    explanation: ''
-                }
+            correct: 0
+        },
+        {
+            question: '¿Qué práctica mejora la seguridad de las contraseñas además de su complejidad?',
+            options: [
+                'Cambiar solo cuando se olvidan',
+                'Activar autenticación multifactor (MFA)',
+                'Anotarlas en lugares visibles'
             ],
+            correct: 1
+        }
+    ],
 
-            'Riesgos': [
-                {
-                    question: 'Tras interactuar con un enlace sospechoso, ¿cuál es la acción más adecuada?',
-                    options: [
-                        'No realizar ninguna acción adicional',
-                        'Cerrar la ventana y continuar',
-                        'Reportar el incidente y cambiar credenciales inmediatamente'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: 'Detectar actividad inusual en una cuenta (accesos, movimientos) requiere:',
-                    options: [
-                        'Monitoreo pasivo',
-                        'Acción inmediata para mitigar el posible compromiso',
-                        'Evaluación posterior',
-
-                    ],
-                    correct: 1,
-                    explanation: ''
-                },
-                {
-                    question: 'No reportar un incidente de seguridad puede generar:',
-                    options: [
-                        'Ningún impacto',
-                        'Solo un retraso',
-                        'Propagación del problema dentro de la organización'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                }
+    'Mail': [
+        {
+            question: 'Recibís un correo indicando que tu cuenta será suspendida si no realizás una acción inmediata mediante un enlace. ¿Cuál es el enfoque más seguro?',
+            options: [
+                'Acceder rápidamente para evitar bloqueos',
+                'Verificar remitente, dominio y enlace antes de cualquier acción',
+                'Ignorar el mensaje momentáneamente'
             ],
+            correct: 1
+        },
+        {
+            question: 'Un correo aparenta provenir de una entidad legítima, pero el dominio presenta una leve alteración. ¿Qué indica esto?',
+            options: [
+                'Una variación válida del dominio',
+                'Un intento de suplantación (phishing)',
+                'Un posible error técnico'
+            ],
+            correct: 1
+        },
+        {
+            question: 'Un correo bien redactado, con datos personales correctos, solicita actualizar credenciales. ¿Cuál es el riesgo principal?',
+            options: [
+                'Puede tratarse de phishing dirigido (spear phishing)',
+                'Bajo riesgo por tratarse de un mensaje personalizado',
+                'Ninguno si la información es correcta'
+            ],
+            correct: 0
+        },
+        {
+            question: 'Recibís un enlace de un contacto conocido sin contexto adicional. ¿Cuál es la mejor práctica?',
+            options: [
+                'Confirmar previamente con el remitente la legitimidad del envío',
+                'Acceder al enlace con normalidad',
+                'Evaluar el contenido luego de abrirlo'
+            ],
+            correct: 0
+        },
+        {
+            question: 'Se solicita validar una cuenta mediante el escaneo de un código QR recibido por correo. ¿Cuál es el principal riesgo?',
+            options: [
+                'Ninguno, es un método seguro',
+                'Puede tratarse de un error de comunicación',
+                'Posible phishing mediante QR (quishing) para redirigir a sitios fraudulentos'
+            ],
+            correct: 2
+        },
+        {
+            question: 'Un correo incluye un archivo adjunto inesperado. ¿Qué se debe hacer?',
+            options: [
+                'Descargarlo y revisarlo luego',
+                'Abrirlo para verificar',
+                'No abrirlo y validar con el remitente'
+            ],
+            correct: 2
+        },
+        {
+            question: '¿Qué característica es común en correos de phishing?',
+            options: [
+                'Solicitudes urgentes de información sensible',
+                'Diseño profesional',
+                'Remitente conocido'
+            ],
+            correct: 0
+        }
+    ],
 
-            'Bonus': [
-                {
-                    question: 'En términos de ciberseguridad organizacional, ¿qué factor suele ser más determinante en la ocurrencia de incidentes?',
-                    options: [
-                        'La tecnología implementada',
-                        'La inversión en infraestructura',
-                        'El comportamiento y las decisiones de los usuarios'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                },
-                {
-                    question: '¿Cuál es la mejor defensa frente a ataques digitales?',
-                    options: [
-                        'Solo tecnología',
-                        'Solo políticas',
-                        'Concientización y buenas prácticas del usuario'
-                    ],
-                    correct: 2,
-                    explanation: ''
-                }
-            ]
-        };
+    'Internet': [
+        {
+            question: 'Al conectarte a una red WiFi pública, ¿cuál es el principal riesgo al acceder a servicios sensibles?',
+            options: [
+                'Baja velocidad de conexión',
+                'Interrupciones en el servicio',
+                'Intercepción de datos por terceros en la red'
+            ],
+            correct: 2
+        },
+        {
+            question: 'Una red abierta con nombre similar al de un comercio conocido está disponible sin contraseña. ¿Qué escenario es posible?',
+            options: [
+                'Red oficial del establecimiento',
+                'Red compartida por usuarios',
+                'Red falsa creada para capturar información (ataque "evil twin")'
+            ],
+            correct: 2
+        },
+        {
+            question: 'Un sitio web presenta HTTPS y certificado válido. ¿Qué garantiza esto?',
+            options: [
+                'Que pertenece a una entidad confiable',
+                'Que el sitio es legítimo',
+                'Que la comunicación está cifrada, no necesariamente que el sitio sea auténtico'
+            ],
+            correct: 2
+        },
+        {
+            question: '¿Qué es una VPN en términos de seguridad?',
+            options: [
+                'Un antivirus avanzado',
+                'Un sistema que cifra la conexión y protege la información',
+                'Una red social privada'
+            ],
+            correct: 1
+        },
+        {
+            question: 'Ingresar credenciales en sitios no verificados puede provocar:',
+            options: [
+                'Errores de carga',
+                'Bloqueo temporal',
+                'Robo de credenciales'
+            ],
+            correct: 2
+        }
+    ],
+
+    'Dispositivos': [
+        {
+            question: 'Al retirarte momentáneamente de tu puesto de trabajo, ¿cuál es la medida más adecuada respecto a tu equipo?',
+            options: [
+                'Dejarlo activo si es por poco tiempo',
+                'Bloquear el acceso al sistema inmediatamente',
+                'Minimizar aplicaciones abiertas'
+            ],
+            correct: 1
+        },
+        {
+            question: 'El uso de dispositivos externos (ej: USB) de origen desconocido implica principalmente:',
+            options: [
+                'Riesgo bajo si el dispositivo es nuevo',
+                'Riesgo limitado al contenido visible',
+                'Posible ejecución de software malicioso sin intervención del usuario'
+            ],
+            correct: 2
+        },
+        {
+            question: 'Posponer actualizaciones del sistema operativo de forma recurrente puede generar:',
+            options: [
+                'Solo pérdida de nuevas funciones',
+                'Exposición a vulnerabilidades conocidas no corregidas',
+                'Impacto en el rendimiento'
+            ],
+            correct: 1
+        },
+        {
+            question: '¿Qué implica no utilizar bloqueo automático de pantalla?',
+            options: [
+                'Mayor comodidad',
+                'Riesgo de acceso no autorizado',
+                'Mejor rendimiento'
+            ],
+            correct: 1
+        },
+        {
+            question: 'Instalar software fuera de fuentes oficiales puede generar:',
+            options: [
+                'Instalación de malware',
+                'Mejor rendimiento',
+                'Más funciones'
+            ],
+            correct: 0
+        }
+    ],
+
+    'Errores': [
+        {
+            question: 'Mantener sesiones abiertas en sistemas corporativos sin supervisión implica:',
+            options: [
+                'Riesgo mínimo en entornos controlados',
+                'Solo problemas operativos',
+                'Acceso directo de terceros sin necesidad de autenticación'
+            ],
+            correct: 2
+        },
+        {
+            question: 'Compartir credenciales entre usuarios dentro de una organización afecta principalmente:',
+            options: [
+                'La velocidad de trabajo',
+                'La trazabilidad y el control de accesos',
+                'La comodidad operativa'
+            ],
+            correct: 1
+        },
+        {
+            question: 'Enviar información sensible por canales no seguros puede provocar:',
+            options: [
+                'Demoras',
+                'Errores administrativos',
+                'Filtración de información'
+            ],
+            correct: 2
+        }
+    ],
+
+    'Engaños Digitales': [
+        {
+            question: 'Una persona se comunica afirmando pertenecer al soporte técnico y solicita acceso remoto. ¿Cuál es el riesgo principal?',
+            options: [
+                'Posible ataque de ingeniería social para obtener control del equipo',
+                'Demora en la resolución del problema',
+                'Acceso limitado al sistema'
+            ],
+            correct: 0
+        },
+        {
+            question: 'El uso de información real (nombre, empresa, cargo) en un contacto inesperado suele indicar:',
+            options: [
+                'Comunicación legítima',
+                'Base de datos interna',
+                'Uso de datos filtrados para generar confianza (ingeniería social)'
+            ],
+            correct: 2
+        },
+        {
+            question: 'Los mensajes que generan urgencia o presión buscan principalmente:',
+            options: [
+                'Reducir el análisis crítico del usuario',
+                'Acelerar procesos',
+                'Mejorar la comunicación'
+            ],
+            correct: 0
+        },
+        {
+            question: 'Un mensaje inesperado solicitando acciones urgentes suele ser:',
+            options: [
+                'Un intento de manipulación (ingeniería social)',
+                'Un error del sistema',
+                'Una actualización importante'
+            ],
+            correct: 0
+        },
+        {
+            question: '¿Qué busca principalmente un atacante en un engaño digital?',
+            options: [
+                'Ayudar al usuario',
+                'Obtener acceso o información confidencial',
+                'Mejorar procesos'
+            ],
+            correct: 1
+        }
+    ],
+
+    'Riesgos': [
+        {
+            question: 'Tras interactuar con un enlace sospechoso, ¿cuál es la acción más adecuada?',
+            options: [
+                'Cerrar la ventana y continuar',
+                'No realizar ninguna acción adicional',
+                'Reportar el incidente y cambiar credenciales inmediatamente'
+            ],
+            correct: 2
+        },
+        {
+            question: 'Detectar actividad inusual en una cuenta (accesos, movimientos) requiere:',
+            options: [
+                'Acción inmediata para mitigar el posible compromiso',
+                'Monitoreo pasivo',
+                'Evaluación posterior'
+            ],
+            correct: 0
+        },
+        {
+            question: 'No reportar un incidente de seguridad puede generar:',
+            options: [
+                'Propagación del problema dentro de la organización',
+                'Ningún impacto',
+                'Solo un retraso'
+            ],
+            correct: 0
+        }
+    ],
+
+    'Bonus': [
+        {
+            question: 'En términos de ciberseguridad organizacional, ¿qué factor suele ser más determinante en la ocurrencia de incidentes?',
+            options: [
+                'La tecnología implementada',
+                'El comportamiento y las decisiones de los usuarios',
+                'La inversión en infraestructura'
+            ],
+            correct: 1
+        },
+        {
+            question: '¿Cuál es la mejor defensa frente a ataques digitales?',
+            options: [
+                'Solo tecnología',
+                'Concientización y buenas prácticas del usuario',
+                'Solo políticas'
+            ],
+            correct: 1
+        }
+    ]
+};
         // ── STATE ─────────────────────────────────────────────────────────
         let currentRotation = 0;
         let isSpinning = false;
